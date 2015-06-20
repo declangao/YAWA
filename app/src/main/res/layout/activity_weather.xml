@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/background"
+                tools:context="me.declangao.yawa.app.WeatherActivity">
+    <!--Current weather-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_weather_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="0dp">
+
+        <!--Weather icon-->
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/current_icon"
+            android:layout_centerHorizontal="true"/>
+
+        <!--Weather description-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv_current_desc"
+            android:layout_below="@+id/current_icon"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/current_temp_container"
+            android:layout_below="@+id/tv_current_desc">
+            <!--Current temperature-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tv_current_temp"/>
+            <!--Current humidity-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tv_current_humidity"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/current_temp_container">
+            <!--Sunrise time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tv_current_sunrise"/>
+            <!--Sunset time-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tv_current_sunset"/>
+        </LinearLayout>
+        <!--Hint-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hint"
+            android:id="@+id/tv_hint"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <!--7-day weather forecast-->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/current_weather_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

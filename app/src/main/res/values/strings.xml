@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">YAWA by Declan Gao</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Error Msg-->
+    <string name="error">Error</string>
+    <string name="error_city_not_found">City not found.\nPlease check your spelling and try again.</string>
+    <string name="error_unknown">Unknown Error</string>
+    <string name="progress_loading">Loading...</string>
+    <string name="error_code_msg">Please try again later.\nError code\u0020</string>
+    <string name="error_json">JSON Exception</string>
+    <string name="error_json_msg">There has been an error on the server. Please try again later.</string>
+    <string name="error_network">Network Error</string>
+    <string name="error_network_forecast">Failed to load 7-day weather forecast. Please check your connection and try again.</string>
+    <string name="error_network_current">Failed to load current weather. Please check your connection and try again.</string>
+
+    <string name="hint">Search for a city to get started \u2191</string>
+    <string name="hint_placeholder">Use \"city + country\" format</string>
+    <string name="temperature">Temperature:\u0020</string>
+    <string name="humidity">Humidity:\u0020</string>
+    <string name="sunrise">Sunrise:\u0020</string>
+    <string name="sunset">Sunset:\u0020</string>
+    <string name="got_it">Got it!</string>
+    <string name="ok">OK</string>
+    <string name="max">Max:\u0020</string>
+    <string name="min">Min:\u0020</string>
+    <string name="wind_speed">Wind Speed:\u0020</string>
+    <string name="pressure">Pressure:\u0020</string>
+    <string name="clouds">Clouds:\u0020</string>
+
+</resources>
